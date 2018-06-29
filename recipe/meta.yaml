@@ -1,4 +1,4 @@
-{% set version = "0.9.20" %}
+{% set version = "0.9.21" %}
 
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
@@ -12,7 +12,7 @@ source:
   url:
     - https://cran.r-project.org/src/contrib/photobiology_{{ version }}.tar.gz
     - https://cran.r-project.org/src/contrib/Archive/photobiology/photobiology_{{ version }}.tar.gz
-  sha256: 94b987cfb93979980021db8e6a74e76060c1c50ad9d529d1a6c84293d3639d70
+  sha256: 6c43913679429d70d5c16dee426b403bda9584d008c3ec3cd7d63d27a837a108
 
 build:
   number: 0
