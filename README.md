@@ -14,14 +14,16 @@ Summary: Definitions of classes, methods, operators and functions for use in pho
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/r-photobiology-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/r-photobiology-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/r-photobiology-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/r-photobiology-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/r-photobiology-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/r-photobiology-feedstock/branch/master)
+[![Linux](https://img.shields.io/circleci/project/github/conda-forge/r-photobiology-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/r-photobiology-feedstock)
+[![OSX](https://img.shields.io/travis/conda-forge/r-photobiology-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/r-photobiology-feedstock)
+[![Windows](https://img.shields.io/appveyor/ci/conda-forge/r-photobiology-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/r-photobiology-feedstock/branch/master)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/r-photobiology/badges/version.svg)](https://anaconda.org/conda-forge/r-photobiology)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/r-photobiology/badges/downloads.svg)](https://anaconda.org/conda-forge/r-photobiology)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-r--photobiology-green.svg)](https://anaconda.org/conda-forge/r-photobiology) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/r-photobiology.svg)](https://anaconda.org/conda-forge/r-photobiology) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/r-photobiology.svg)](https://anaconda.org/conda-forge/r-photobiology) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/r-photobiology.svg)](https://anaconda.org/conda-forge/r-photobiology) |
 
 Installing r-photobiology
 =========================
