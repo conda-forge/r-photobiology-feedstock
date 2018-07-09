@@ -1,5 +1,4 @@
-{% set version = "0.9.22" %}
-
+{% set version = '0.9.22' %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +9,12 @@ package:
 source:
   fn: photobiology_{{ version }}.tar.gz
   url:
-    - https://cran.r-project.org/src/contrib/photobiology_{{ version }}.tar.gz
-    - https://cran.r-project.org/src/contrib/Archive/photobiology/photobiology_{{ version }}.tar.gz
+    - {{ cran_mirror }}/src/contrib/photobiology_{{ version }}.tar.gz
+    - {{ cran_mirror }}/src/contrib/Archive/photobiology/photobiology_{{ version }}.tar.gz
   sha256: 6fa9c20c483ab1a98ff305e8bb99333196b8cbaa8b59cb1964d969dce36b4526
 
 build:
+  merge_build_host: True  # [win]
   number: 0
   skip: true  # [win32]
   rpaths:
@@ -23,34 +23,34 @@ build:
 
 requirements:
   build:
+  host:
     - r-base
-    - r-catools >=1.17.1
-    - r-dplyr >=0.7.4
-    - r-lubridate >=1.7.1
+    - r-dplyr >=0.7.5
+    - r-lubridate >=1.7.4
     - r-plyr >=1.8.4
     - r-polynom >=1.3_9
-    - r-rlang >=0.1.4
+    - r-rlang >=0.2.1
     - r-splus2r >=1.2_2
-    - r-tibble >=1.3.4
-
+    - r-tibble >=1.4.2
+    - r-zoo >=1.8_2
   run:
     - r-base
-    - r-catools >=1.17.1
-    - r-dplyr >=0.7.4
-    - r-lubridate >=1.7.1
+    - r-dplyr >=0.7.5
+    - r-lubridate >=1.7.4
     - r-plyr >=1.8.4
     - r-polynom >=1.3_9
-    - r-rlang >=0.1.4
+    - r-rlang >=0.2.1
     - r-splus2r >=1.2_2
-    - r-tibble >=1.3.4
+    - r-tibble >=1.4.2
+    - r-zoo >=1.8_2
 
 test:
   commands:
-    - $R -e "library('photobiology')"  # [not win]
+    - $R -e "library('photobiology')"           # [not win]
     - "\"%R%\" -e \"library('photobiology')\""  # [win]
 
 about:
-  home: https://bitbucket.org/aphalo/photobiology
+  home: https://www.r4photobiology.info/, https://bitbucket.org/aphalo/photobiology
   license: GPL (>= 2)
   summary: Definitions of classes, methods, operators and functions for use in photobiology and
     radiation meteorology and climatology. Calculation of effective (weighted) and not-weighted
@@ -58,14 +58,15 @@ about:
     and diverse ratios and other derived quantities from spectral data. Local maxima
     and minima. Conversion between energy- and photon-based units. Wavelength interpolation.
     Astronomical calculations related solar angles and day length. Colours and vision.
+    This package is part of the 'r4photobiology' suite, Aphalo P. J. (2015) <doi:10.19232/uv4pb.2015.1.14>.
   license_family: GPL3
   license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'  # [unix]
   license_file: '{{ environ["PREFIX"] }}\R\share\licenses\GPL-3'  # [win]
 
 extra:
   recipe-maintainers:
-    - cbrueffer
     - johanneskoester
     - bgruening
     - daler
     - jdblischak
+    - cbrueffer
