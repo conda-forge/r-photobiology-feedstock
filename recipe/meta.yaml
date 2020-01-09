@@ -1,4 +1,4 @@
-{% set version = "0.9.29" %}
+{% set version = "0.9.30" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/photobiology_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/photobiology/photobiology_{{ version }}.tar.gz
-  sha256: 09bc107cfcd1f762a6e513c96961ec102578dcb9cf22f074dcaf79494a19dac6
+  sha256: 51543f15e7865dcf4cf11e7ff3ab480c2c7bbecfd18c37bdc5bb82ff68ea2560
 
 build:
   merge_build_host: True  # [win]
