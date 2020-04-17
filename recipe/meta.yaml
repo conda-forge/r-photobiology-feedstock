@@ -25,24 +25,27 @@ requirements:
     - {{posix}}zip               # [win]
   host:
     - r-base
-    - r-dplyr >=0.7.8
+    - r-dplyr >=0.8.1
     - r-lubridate >=1.7.4
     - r-plyr >=1.8.4
-    - r-polynom >=1.3_9
-    - r-rlang >=0.3.1
+    - r-polynom >=1.4_0
+    - r-rlang >=0.4.5
     - r-splus2r >=1.2_2
+    - r-stringr >=1.4.0
     - r-tibble >=2.0.1
-    - r-zoo >=1.8_4
+    - r-zoo >=1.8_7
   run:
     - r-base
-    - r-dplyr >=0.7.8
+    
+    - r-dplyr >=0.8.1
     - r-lubridate >=1.7.4
     - r-plyr >=1.8.4
-    - r-polynom >=1.3_9
-    - r-rlang >=0.3.1
+    - r-polynom >=1.4_0
+    - r-rlang >=0.4.5
     - r-splus2r >=1.2_2
+    - r-stringr >=1.4.0
     - r-tibble >=2.0.1
-    - r-zoo >=1.8_4
+    - r-zoo >=1.8_7
 
 test:
   commands:
