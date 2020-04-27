@@ -1,4 +1,4 @@
-{% set version = "0.10.1" %}
+{% set version = "0.10.2" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,12 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/photobiology_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/photobiology/photobiology_{{ version }}.tar.gz
-  sha256: 5c02c24d83b238a9eb2b06c4b2fcab66ec8ef93bbdcb176bc4e1b71e3545e9f1
+  sha256: 60fd2488054ce17132ac474f1dcb6a0d404a677d4e9f041631e1ef6ca3f86083
 
 build:
   merge_build_host: true  # [win]
   number: 0
+  skip: True  # [r_base == "3.5.1"]
   noarch: generic
   rpaths:
     - lib/R/lib/
@@ -22,7 +23,7 @@ build:
 
 requirements:
   build:
-    - {{posix}}zip               # [win]
+    - {{ posix }}zip               # [win]
   host:
     - r-base
     - r-dplyr >=0.8.1
@@ -36,7 +37,7 @@ requirements:
     - r-zoo >=1.8_7
   run:
     - r-base
-    
+
     - r-dplyr >=0.8.1
     - r-lubridate >=1.7.4
     - r-plyr >=1.8.4
@@ -55,10 +56,8 @@ test:
 about:
   home: https://www.r4photobiology.info/, https://bitbucket.org/aphalo/photobiology
   license: GPL (>= 2)
-  summary: Definitions of classes, methods, operators and functions for use in photobiology and radiation meteorology and climatology. Calculation of effective (weighted)
-    and not-weighted irradiances/doses, fluence rates, transmittance, reflectance, absorptance, absorbance and diverse ratios and other derived quantities from spectral
-    data. Local maxima and minima. Conversion between energy- and photon-based units. Wavelength interpolation. Astronomical calculations related solar angles and
-    day length. Colours and vision. This package is part of the 'r4photobiology' suite, Aphalo P. J. (2015) <doi:10.19232/uv4pb.2015.1.14>.
+  summary: Definitions of classes, methods, operators and functions for use in photobiology and radiation meteorology and climatology. Calculation of effective (weighted) and not-weighted irradiances/doses, fluence rates, transmittance, reflectance, absorptance, absorbance and diverse ratios and other derived quantities
+    from spectral data. Local maxima and minima. Conversion between energy- and photon-based units. Wavelength interpolation. Astronomical calculations related solar angles and day length. Colours and vision. This package is part of the 'r4photobiology' suite, Aphalo P. J. (2015) <doi:10.19232/uv4pb.2015.1.14>.
   license_family: GPL3
   license_file: {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2
 
