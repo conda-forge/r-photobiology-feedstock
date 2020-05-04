@@ -14,9 +14,8 @@ source:
 
 build:
   merge_build_host: true  # [win]
-  number: 0
+  number: 1
   skip: True  # [r_base == "3.5.1"]
-  noarch: generic
   rpaths:
     - lib/R/lib/
     - lib/
