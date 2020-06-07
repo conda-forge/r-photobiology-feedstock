@@ -3,7 +3,7 @@ About r-photobiology
 
 Home: https://www.r4photobiology.info/, https://bitbucket.org/aphalo/photobiology
 
-Package license: GPL (>= 2)
+Package license: GPL-2.0-or-later
 
 Feedstock license: BSD 3-Clause
 
