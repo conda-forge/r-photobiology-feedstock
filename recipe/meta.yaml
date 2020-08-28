@@ -15,7 +15,6 @@ source:
 build:
   merge_build_host: true  # [win]
   number: 0
-  skip: true  # [r_base == "3.5.1"]
   rpaths:
     - lib/R/lib/
     - lib/
@@ -27,25 +26,25 @@ requirements:
     - r-base
     - r-dplyr >=1.0.0
     - r-lubridate >=1.7.8
-    - r-memoise >=1.1.0
     - r-plyr >=1.8.4
     - r-polynom >=1.4_0
     - r-rlang >=0.4.6
     - r-splus2r >=1.2_2
     - r-stringr >=1.4.0
     - r-tibble >=3.0.1
+    - r-tidyr >=1.1.0
     - r-zoo >=1.8_7
   run:
     - r-base
     - r-dplyr >=1.0.0
     - r-lubridate >=1.7.8
-    - r-memoise >=1.1.0
     - r-plyr >=1.8.4
     - r-polynom >=1.4_0
     - r-rlang >=0.4.6
     - r-splus2r >=1.2_2
     - r-stringr >=1.4.0
     - r-tibble >=3.0.1
+    - r-tidyr >=1.1.0
     - r-zoo >=1.8_7
 
 test:
