@@ -1,4 +1,4 @@
-{% set version = "0.10.6" %}
+{% set version = "0.10.7" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/photobiology_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/photobiology/photobiology_{{ version }}.tar.gz
-  sha256: 8fe478e8ecf900543cf758b77e0ba3d87f075c3b0e35750cd5966a581740488a
+  sha256: 1298ba85bca7607110333f86c9e62a3d8fec4dad3501927512119bb527914f91
 
 build:
   merge_build_host: true  # [win]
@@ -22,30 +22,33 @@ build:
 requirements:
   build:
     - {{ posix }}zip               # [win]
+    - cross-r-base {{ r_base }}    # [build_platform != target_platform]
   host:
     - r-base
-    - r-dplyr >=1.0.0
+    - r-dplyr >=1.0.2
     - r-lubridate >=1.7.8
     - r-plyr >=1.8.4
     - r-polynom >=1.4_0
-    - r-rlang >=0.4.6
+    - r-rlang >=0.4.8
+    - r-rmarkdown >=2.4
     - r-splus2r >=1.2_2
     - r-stringr >=1.4.0
-    - r-tibble >=3.0.1
-    - r-tidyr >=1.1.0
-    - r-zoo >=1.8_7
+    - r-tibble >=3.0.4
+    - r-tidyr >=1.1.2
+    - r-zoo >=1.8_8
   run:
     - r-base
-    - r-dplyr >=1.0.0
+    - r-dplyr >=1.0.2
     - r-lubridate >=1.7.8
     - r-plyr >=1.8.4
     - r-polynom >=1.4_0
-    - r-rlang >=0.4.6
+    - r-rlang >=0.4.8
+    - r-rmarkdown >=2.4
     - r-splus2r >=1.2_2
     - r-stringr >=1.4.0
-    - r-tibble >=3.0.1
-    - r-tidyr >=1.1.0
-    - r-zoo >=1.8_7
+    - r-tibble >=3.0.4
+    - r-tidyr >=1.1.2
+    - r-zoo >=1.8_8
 
 test:
   commands:
