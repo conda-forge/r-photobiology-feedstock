@@ -1,4 +1,4 @@
-{% set version = "0.10.13" %}
+{% set version = "0.10.14" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/photobiology_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/photobiology/photobiology_{{ version }}.tar.gz
-  sha256: 8bbcc5a64e63fff38ea2477d9c650af532f6f333fac3dfee53ad5dc1e859361b
+  sha256: 41700123edf81cd415df4471b4f4288298e663641b63883d08ec2e795d4d944c
 
 build:
   merge_build_host: true  # [win]
-  number: 1
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
