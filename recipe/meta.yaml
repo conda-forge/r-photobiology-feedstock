@@ -1,6 +1,5 @@
 {% set version = "0.11.0" %}
 {% set posix = 'm2-' if win else '' %}
-{% set native = 'm2w64-' if win else '' %}
 
 package:
   name: r-photobiology
@@ -13,8 +12,7 @@ source:
   sha256: 18c94728053ca70d8293efe8bbe20b6ca408ef4bf6977fc65f41bf2be8b7a697
 
 build:
-  merge_build_host: true  # [win]
-  number: 0
+  number: 1
   rpaths:
     - lib/R/lib/
     - lib/
