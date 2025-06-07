@@ -1,4 +1,4 @@
-{% set version = "0.12.0" %}
+{% set version = "0.13.0" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,7 +9,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/photobiology_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/photobiology/photobiology_{{ version }}.tar.gz
-  sha256: 20dfc4c22cf905224021b6656118cda6a51c8612f6b101fb30500094003e8641
+  sha256: fcb363ba9f798ca9ec90c7d56a352a44626af000097f0effe0e22055ce0f6002
 
 build:
   number: 0
