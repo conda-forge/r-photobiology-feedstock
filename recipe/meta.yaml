@@ -13,9 +13,14 @@ source:
 
 build:
   number: 0
+  noarch: generic
   rpaths:
     - lib/R/lib/
     - lib/
+  missing_dso_whitelist:
+    - '*/R.dll'        # [win]
+    - '*/Rblas.dll'    # [win]
+    - '*/Rlapack.dll'  # [win]
 
 requirements:
   build:
@@ -23,10 +28,10 @@ requirements:
     - cross-r-base {{ r_base }}    # [build_platform != target_platform]
   host:
     - r-base
-    - r-suncalcmeeus >=0.1.2
+    - r-suncalcmeeus >=0.1.3
     - r-catools >=1.18.0
     - r-dplyr >=1.1.4
-    - r-lubridate >=1.9.3
+    - r-lubridate >=1.9.4
     - r-plyr >=1.8.9
     - r-polynom >=1.4_1
     - r-rlang >=1.1.4
@@ -37,10 +42,10 @@ requirements:
     - r-zoo >=1.8_12
   run:
     - r-base
-    - r-suncalcmeeus >=0.1.2
+    - r-suncalcmeeus >=0.1.3
     - r-catools >=1.18.0
     - r-dplyr >=1.1.4
-    - r-lubridate >=1.9.3
+    - r-lubridate >=1.9.4
     - r-plyr >=1.8.9
     - r-polynom >=1.4_1
     - r-rlang >=1.1.4
